@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_nav_graph"
+    app:startDestination="@id/searchImageFragment">
+
+    <fragment
+        android:id="@+id/searchImageFragment"
+        android:name="com.example.searchmyimage.ui.searchimage.view.SearchImageFragment"
+        android:label="search_image_fragment"
+        tools:layout="@layout/search_image_fragment" >
+        <action
+            android:id="@+id/action_searchImageFragment_to_fullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.searchmyimage.ui.settings.view.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+
+    <fragment
+        android:id="@+id/videoSearchFragment"
+        android:name="com.example.searchmyimage.ui.videosearch.view.VideoSearchFragment"
+        android:label="video_search_fragment"
+        tools:layout="@layout/video_search_fragment" />
+    <fragment
+        android:id="@+id/fullScreenImageFragment"
+        android:name="com.example.searchmyimage.ui.fullscreenimage.view.FullScreenImageFragment"
+        android:label="full_screen_image_fragment"
+        tools:layout="@layout/full_screen_image_fragment" >
+        <action
+            android:id="@+id/action_fullScreenImageFragment_to_searchImageFragment"
+            app:destination="@id/searchImageFragment" />
+        <argument
+            android:name="image_url"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
