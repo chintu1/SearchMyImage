@@ -1,3 +1,3 @@
 # SearchMyImage
 Initial Commit
-Add API_KEY="GET API KEY FROM https://pixabay.com/api/docs/"
+Add Constant in gradle.properties file name with API_KEY="GET API KEY FROM https://pixabay.com/api/docs/"
